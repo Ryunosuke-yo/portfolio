@@ -11,6 +11,13 @@ module.exports = {
       red : "#e85f5f",
       green : "#58e093"
     },
+    extend : {
+      fontFamily : {
+        playfair : ['Playfair Display SC', 'serif'],
+        ci : ['Cinzel', 'serif'],
+        hand : ['Aguafina Script', 'cursive']
+      }
+    }
   },
   plugins: [],
 }

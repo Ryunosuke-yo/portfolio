@@ -1,33 +1,20 @@
-import {motion} from "framer-motion"
-import { useEffect, useRef, useState } from "react"
-import png from "../../../assets/Svgs/hand.svg" 
+
 
 export default function(){
 
     return (
-        <>
-            {/* <div>
-            <img src="../../../assets/Svgs/hand.png" />
-
-            </div> */}
+        <div className=" text-white  h-screen w-full">
+            <h1 className="mt-10 mb-14 text-center text-3xl">Skills</h1>
+                <div>
             
-                <div style={{
-                    backgroundImage: `url("${png}")`,
-                    backgroundRepeat: "no-repeat",
-                    height : "700px",
-                    width : "100%",
-                    marginTop : "20%",
-                    // backgroundSize : "cover"
-                }}>
-                    <h1 style={{
-                        marginLeft : "65%",
-                        paddingTop : "4%",
-                        fontSize : "3rem"
-                    }}>
-                        Skills
-                    </h1>
+                    <div className="grid gap-4 grid-cols-2  w-full text-xl">
+                        <p className="border border-white rounded-lg p-4 text-center">React</p>
+                        <p className="border border-white rounded-lg p-4 text-center ">NodeJs</p>
+                        <p className="border border-white rounded-lg p-4  text-center ">NextJs</p>
+                        <p className="border border-white rounded-lg p-4   text-center">HTML/CSS</p>
+                    </div>
                 </div>
-            {/* <ReactPlayer url="../../../assets/hand_2.mp4" playing/> */}
-        </>
+            
+        </div>
     )
 }

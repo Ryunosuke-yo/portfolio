@@ -4,13 +4,12 @@ import Header from "../Header"
     export default function(){
       
     return (
-    <>
-        {/* <Header/> */}
+    
             <>
-                <h1>Hello!</h1>
-                <h1>I'm Ryunosuke Yokokawa</h1>
-                <h2>Japanese Web Developer in Canada</h2>
+                <h1 className="pt-8">Hello!</h1>
+                <h1 className="pt-8">I'm Ryunosuke Yokokawa</h1>
+                <h2 className="pt-8">Japanese Web Developer in Canada</h2>
             </>
-    </>
+
     )
 }
