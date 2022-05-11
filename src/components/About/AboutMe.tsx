@@ -24,8 +24,8 @@ export default function(){
                         }}>
                         <p >I am a web developer in Canada. I am really intrigued and passionate about front-end development. I love to create UI and animation!</p>
                         <div className="mt-5 text-2xl">
-                        <p>2020 - BA in International Development, Kansai Gaidai University In Japan</p>
-                        <p className="mt-2">2022 - Post Degree Diploma in Web and Mobile App Design and Development, Langara College In Canada</p>
+                        <p>2016-2020 : BA in International Development, Kansai Gaidai University In Japan</p>
+                        <p className="mt-2">2021-2022 : Post Degree Diploma in Web and Mobile App Design and Development, Langara College In Canada</p>
                         </div>
                         </div>
                         

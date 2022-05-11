@@ -8,34 +8,44 @@ import TextHeroSection from './components/hero/TextHeroSection'
 import SvgHeroSection from './components/hero/SvgHeroSection'
 import ThreeSeceneProjects from './components/projects/ThreeSeceneProjects'
 import Contact from './components/Contact/Contact'
-import { createContext, useState } from 'react'
-import { projectsArr } from './components/projects/projectArr'
-import { motion, AnimatePresence } from 'framer-motion'
-
-
-
-interface Project {
-  title : String,
-  date : String,
-  desc : String,
-  myRole : String,
-  tech : Object,
-  url : String,
-  icon : String
-  
-}
-
+import { useEffect, useState, useCallback } from 'react'
+import Loading from './components/loading/Loading'
+import Particles from "react-tsparticles";
+import type { Engine } from "tsparticles-engine";
+import { loadFull } from "tsparticles";
 function App() { 
     
+    const [loading, setLoading] = useState(true)
+    // useEffect(()=>{
+    //     setLoading(false)
+    // },[])
 
+    useEffect(() => {
+      const timer = setTimeout(() => {
+        setLoading(false);
+      }, 3000);
+      return () => clearTimeout(timer);
+    }, []);
+    
+    const customInit = async (engine: Engine) => {
+      // this adds the bundle to tsParticles
+      await loadFull(engine);
+    }
+    
+    const options = {
+      background: {
+        color: "#0d47a1",
+      },
+      }
 
   return (
+    
+    loading ? <Loading /> : 
     <>
-
     <Header /> 
-     <div className="grid grid-cols-2">
+     <div className="grid grid-cols-2 ">
         <Parallax translateY={[-7, 8]}>
-          <div className="bg-bg text-white font-playfair text-8xl pl-8" style={{
+          <div className="bg-bg text-white font-playfair text-8xl pl-8 " style={{
             height : "1000px",
           }}>
             <TextHeroSection />
@@ -43,7 +53,7 @@ function App() {
         </Parallax>
 
         <Parallax translateX={[-30, 40]} opacity={[2.6, -0.7]}>
-          <div >
+          <div>
             <SvgHeroSection />
           </div>
         </Parallax>
@@ -51,7 +61,7 @@ function App() {
 
    
      <div className="grid grid-cols-3  h-screen">
-        <div className='bg-yellow' id="Projects">
+        <div className='bg-yellow z-10' id="Projects">
           <Parallax translateY={[-10, 8]}  opacity={[0, 2]}>
             <div className=' h-screen'>
                 <ThreeSeceneProjects />
@@ -76,8 +86,8 @@ function App() {
           <Skills/>
         </Parallax>
           </div>
-
-          <div className='bg-green z-30 col-span-3' style={{height : "700px"}} id="Contact">
+          
+          <div className='bg-green  col-span-3' style={{height : "700px"}} id="Contact">
             <Parallax translateY={[10, 50]}>
               <Contact />
             </Parallax>
@@ -85,6 +95,7 @@ function App() {
 
      </div>
   </>
+    
 
     
   )

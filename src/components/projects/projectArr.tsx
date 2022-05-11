@@ -58,5 +58,18 @@ export const projectsArr = [
         },
         url : "https://github.com/Ryunosuke-yo/Game-with-me",
         icon : "../../../assets/projects/game-with-me.svg"
+    },
+    {
+        title : "This portfolio",
+        date : "May, 2022",
+        desc : "My portfolio",
+        myRole : "Designed and developed by me",
+        tech : {
+            front : "React, TailwindCSS, Typescript, ViteJs",
+            back : "no backend"
+        },
+        url : "https://github.com/Ryunosuke-yo/portfolio",
+        icon : "../../../assets/Svgs/geisha.svg"
+
     }
 ]

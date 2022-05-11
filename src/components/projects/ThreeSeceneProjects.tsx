@@ -3,7 +3,6 @@ import { Suspense, useRef } from 'react'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Environment, OrbitControls } from "@react-three/drei";
-
 const GroupObj = ()=>{
     const rocket = useLoader(GLTFLoader, "./assets/3dObj/rocket/scene.gltf")
     const cloud1 = useLoader(GLTFLoader, "./assets/3dObj/cloud/scene.gltf")

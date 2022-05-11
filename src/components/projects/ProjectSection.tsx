@@ -57,7 +57,7 @@ export default function(){
                             <p className='mt-9'>{selectedProject?.date}</p>
                         </div>
                         <div className='pt-9 text-center text-xl'>
-                        <a href={selectedProject?.url} className="underline " target="_blank" rel="noopener noreferrer">Github Repo</a>
+                        <a href={selectedProject?.url} className="underline" target="_blank" rel="noopener noreferrer">Github Repo</a>
                         </div>
                     
                     </div> 

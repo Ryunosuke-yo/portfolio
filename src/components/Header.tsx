@@ -12,7 +12,7 @@ const Header = ()=>{
     ]
 
     return (
-        <header className="flex justify-between items-center px-12 py-12 text-2xl text-bg">
+        <header className="z-10 flex justify-between items-center px-12 py-12 text-2xl text-bg bg-white">
                 <h1>Ryunosuke Yokokawa</h1>
             <nav>
                 <ul className="flex">
