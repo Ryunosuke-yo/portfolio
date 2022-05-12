@@ -1,9 +1,10 @@
+import SpriteAnimation from "../sprite/SpriteAnimation";
 
 
 export default function(){
 
     return (
-        <div className=" text-white  h-screen w-full">
+        <div className=" text-white  h-screen w-full font-pixel">
             <h1 className="mt-10 mb-14 text-center text-3xl">Skills</h1>
                 <div>
             
@@ -19,7 +20,7 @@ export default function(){
                         <p className="border border-white rounded-lg p-4  text-center ">Typescript</p>
                     </div>
                 </div>
-            
+            <SpriteAnimation />
         </div>
     )
 }

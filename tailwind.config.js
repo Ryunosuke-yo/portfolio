@@ -15,7 +15,8 @@ module.exports = {
       fontFamily : {
         playfair : ['Playfair Display SC', 'serif'],
         ci : ['Cinzel', 'serif'],
-        hand : ['Aguafina Script', 'cursive']
+        hand : ['Aguafina Script', 'cursive'],
+        pixel : ['VT323', 'monospace']
       }
     }
   },

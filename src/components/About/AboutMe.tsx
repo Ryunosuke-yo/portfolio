@@ -1,13 +1,13 @@
 import {motion} from "framer-motion"
 import { useEffect, useRef, useState } from "react"
-import png from "../../../assets/Svgs/hand.svg" 
+import backSvg from "../../../assets/Svgs/hand.svg" 
 
 export default function(){
 
     return (
         <>
                 <div style={{
-                    backgroundImage: `url("${png}")`,
+                    backgroundImage: `url("${backSvg}")`,
                     backgroundRepeat: "no-repeat",
                     height : "700px",
                     width : "100%",

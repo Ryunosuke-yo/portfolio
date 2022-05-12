@@ -10,44 +10,33 @@ import ThreeSeceneProjects from './components/projects/ThreeSeceneProjects'
 import Contact from './components/Contact/Contact'
 import { useEffect, useState, useCallback } from 'react'
 import Loading from './components/loading/Loading'
-import Particles from "react-tsparticles";
-import type { Engine } from "tsparticles-engine";
-import { loadFull } from "tsparticles";
+import backSvg2 from "../assets/Svgs/suit2.svg"
+import backSvg from "../assets/Svgs/suitMan.svg"
+import StickyMedia from './components/StickyMedia'
 function App() { 
     
     const [loading, setLoading] = useState(true)
-    // useEffect(()=>{
-    //     setLoading(false)
-    // },[])
+    useEffect(()=>{
+        setLoading(false)
+    },[])
 
-    useEffect(() => {
-      const timer = setTimeout(() => {
-        setLoading(false);
-      }, 3000);
-      return () => clearTimeout(timer);
-    }, []);
+    // useEffect(() => {
+    //   const timer = setTimeout(() => {
+    //     setLoading(false);
+    //   }, 3000);
+    //   return () => clearTimeout(timer);
+    // }, []);
     
-    const customInit = async (engine: Engine) => {
-      // this adds the bundle to tsParticles
-      await loadFull(engine);
-    }
-    
-    const options = {
-      background: {
-        color: "#0d47a1",
-      },
-      }
 
   return (
     
     loading ? <Loading /> : 
     <>
+    <StickyMedia />
     <Header /> 
      <div className="grid grid-cols-2 ">
         <Parallax translateY={[-7, 8]}>
-          <div className="bg-bg text-white font-playfair text-8xl pl-8 " style={{
-            height : "1000px",
-          }}>
+          <div className="bg-bg text-white font-playfair text-8xl pl-8 h-screen">
             <TextHeroSection />
           </div>
         </Parallax>
@@ -87,8 +76,8 @@ function App() {
         </Parallax>
           </div>
           
-          <div className='bg-green  col-span-3' style={{height : "700px"}} id="Contact">
-            <Parallax translateY={[10, 50]}>
+          <div className='bg-green  col-span-3 h-screen relative' id="Contact">
+            <Parallax translateY={[3, 20]}>
               <Contact />
             </Parallax>
           </div>
