@@ -9,7 +9,9 @@ export const projectsArr = [
             back : "Nodejs, GraphQL, firebase"
         },
         url : "https://github.com/JavierLeon100/Nimble-App",
-        icon : "../../../assets/projects/nimble.svg"
+        icon : "../../../assets/projects/nimble.svg",
+        image :[ "../../../assets/projects_image/nimble_image.png"],
+        website : "https://nimble-project.webflow.io/"
     },
     {
         title : "SkillBarter",
@@ -21,7 +23,11 @@ export const projectsArr = [
             back : "Nodejs/Express, MongoDB",
         },
         url : "https://github.com/sahibrightnow/Skillbarter",
-        icon : "./../../assets/projects/SkillBarter.svg"
+        icon : "../../../assets/projects/SkillBarter.svg",
+        image : [
+            "../../../assets/projects_image/skillbarter.png",
+            "../../../assets/projects_image/skillbarter2.png"
+        ]
     },
     {
         title : "Moving Tracker",
@@ -33,6 +39,7 @@ export const projectsArr = [
             back : "Nodejs/Express, MongoDB"
         },
         url : "https://github.com/jharteaga/moving-tracker-pwa",
+        image : ["../../../assets/projects/moving-tracker-.svg"],
         icon : "../../../assets/projects/moving-tracker-.svg"
     },
     {
@@ -45,6 +52,7 @@ export const projectsArr = [
             back : "Nodejs/Express, MongoDB"
         },
         url : "https://github.com/Ryunosuke-yo/Vanfood",
+        image : ["../../../assets/projects_image/vanfood.png", "../../../assets/projects_image/vanfood2.png"],
         icon : "../../../assets/projects/vanfood.svg"
     },
     {
@@ -57,6 +65,7 @@ export const projectsArr = [
             back : "NodeJs/Express, firebase"
         },
         url : "https://github.com/Ryunosuke-yo/Game-with-me",
+        image :[ "../../../assets/projects/game-with-me.svg"],
         icon : "../../../assets/projects/game-with-me.svg"
     },
     {
@@ -69,7 +78,9 @@ export const projectsArr = [
             back : "no backend"
         },
         url : "https://github.com/Ryunosuke-yo/portfolio",
-        icon : "../../../assets/Svgs/geisha.svg"
+        image :[ "../../../assets/Svgs/geisha.svg"],
+        icon : "../../../assets/Svgs/geisha.svg",
+        size : 100
 
     }
 ]

@@ -3,8 +3,9 @@ import { send } from 'emailjs-com';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
 import Modal from "react-bootstrap/Modal";
-import { useState } from "react";
-
+import { useState, Suspense } from "react";
+import Slide from "react-reveal/Slide"
+import Loading from "../../loading/Loading"
 interface Props {
     setShow: any
 }
@@ -26,7 +27,8 @@ export default function(props: Props){
     }
 
     return (
-        <>
+        <Suspense fallback={<Loading />}>
+        <Slide left cascade duration={500}>
         <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col w-6/12  mx-auto text-center text-xl mt-9">
             <div className="mt-4">
                 <label htmlFor="from_name" className="underline decoration-dashed">Your Name</label>
@@ -47,9 +49,9 @@ export default function(props: Props){
             <button type="submit">
                 <p className="text-4xl hover:uppercase hover:underline">send</p>
             </button>
-
             </div>
         </form>
-                 </>
+                 </Slide>
+                 </Suspense>
                 )
 }
