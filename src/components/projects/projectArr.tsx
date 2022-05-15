@@ -3,7 +3,7 @@ export const projectsArr = [
         title : "Nimble",
         date : "Jan - Apr, 2022",
         desc : "IOS & Android native task management app for parents and children",
-        myRole : "I did 100% of UI Implementation and great contribution to front end functionality",
+        myRole : "100% of UI Implementation and great contribution to front end functionality",
         tech : {
             front : "React Native, Expo, Nativebase",
             back : "Nodejs, GraphQL, firebase"
@@ -17,7 +17,7 @@ export const projectsArr = [
         title : "SkillBarter",
         date : "Sep - Dec, 2021",
         desc : "Full-stack web application to connect skillful people as a mentor with those who want to learn the skill",
-        myRole : "I created all of front end elements including UI and functionality",
+        myRole : "all of front end elements including UI and functionality",
         tech : {
             front : "React, CSS, Material UI (little bit)",
             back : "Nodejs/Express, MongoDB",

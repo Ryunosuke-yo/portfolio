@@ -15,7 +15,7 @@ export default function(){
         url : string,
         icon : string,
         website? : string
-        image : any,
+        image : any,    
         size? : number
     }
     
@@ -32,14 +32,14 @@ export default function(){
     ))
 
     const mapImage = selectedProject?.image.map((img: string)=>(
-        <img className='mt-9 mx-auto rounded-xl' src={img} alt=""  width={size} height={size}/>
+        <img className='mt-2 desktop:mt-9 mx-auto rounded-xl' src={img} alt=""  width={size} height={size}/>
     ))
 
     return (
-        <div className="flex justify-center flex-col items-center relative pt-9">
+        <div className="flex justify-center flex-col items-center relative desktop:pt-9">
             <h1 className='text-3xl text-bg'>Projects</h1>
             <Bounce cascade top>
-                <div className="grid grid-cols-3 gap-20">
+                <div className="grid grid-cols-2 desktop:grid-cols-3 gap-10 desktop:gap-20 px-6">
                     {mapProjects}
                 </div>
                 <p className='text-2xl mt-8'>Click each to see details</p>
@@ -51,22 +51,25 @@ export default function(){
                     initial={{opacity: 0 }}
                     animate={{opacity: 1 }}
                     exit={{opacity: 0 }}
-                    className="top-0 absolute h-full w-full left-2"
+                    className="top-0 desktop:top-0 absolute desktop:h-full desktop:w-full left-2 px-6 "
+                    style={{
+                        top: "-5%"
+                    }}
                     >   
-                    <div className=" bg-bg text-white rounded-3xl relative px-11 py-11 ">
-                        <h2 className='text-center text-5xl '> - {selectedProject?.title} - </h2>
+                    <div className=" bg-bg text-white rounded-3xl relative px-11 py-11 h-full desktop:h-auto">
+                        <h2 className='text-center text-2xl desktop:text-5xl '> - {selectedProject?.title} - </h2>
                         <IoCloseOutline onClick={()=>setSelectedId(null)} className="absolute top-9 right-10 cursor-pointer"/>
-                        <div className='text-2xl font-light'>
+                        <div className='text-xl desktop:text-2xl font-light'>
                             <div className='flex'>
                             {mapImage}
                             </div>
-                            <p className='mt-9'>-{selectedProject?.desc}</p>
-                            <p className='mt-9'>-{selectedProject?.myRole}</p>
-                            <p className='mt-9'>Frontend - {selectedProject?.tech.front}</p>
-                            <p className='mt-9'>Backend - {selectedProject?.tech.back}</p>
-                            <p className='mt-9'>{selectedProject?.date}</p>
+                            <p className='mt-2 desktop:mt-9'>-{selectedProject?.desc}</p>
+                            <p className='mt-2 desktop:mt-9'>-{selectedProject?.myRole}</p>
+                            <p className='mt-2 desktop:mt-9'>Frontend - {selectedProject?.tech.front}</p>
+                            <p className='mt-2 desktop:mt-9'>Backend - {selectedProject?.tech.back}</p>
+                            <p className='mt-2 desktop:mt-9'>{selectedProject?.date}</p>
                         </div>
-                        <div className='pt-9 text-center text-xl flex-col'>
+                        <div className='pt-2 desktop:pt-9 text-center text-xl flex-col'>
                         <a href={selectedProject?.website} className="underline" target="_blank" rel="noopener noreferrer">Github Repo</a>
                         </div>
                         {selectedProject?.website &&

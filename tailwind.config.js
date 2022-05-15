@@ -1,3 +1,4 @@
+
 module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}"
@@ -9,7 +10,8 @@ module.exports = {
       yellow : "#fae246",
       purple : "#af75f0",
       red : "#e85f5f",
-      green : "#58e093"
+      green : "#58e093",
+      white_gray : "#9c9898"
     },
     extend : {
       fontFamily : {
@@ -18,7 +20,16 @@ module.exports = {
         hand : ['Aguafina Script', 'cursive'],
         pixel : ['VT323', 'monospace']
       }
+    },
+    screens : {
+      mobile : "480px",
+      tablet : "768px",
+      desktop : "1080px"
+    },
+    backgroundImage: {
+      'geisha': "url('./assets/Svgs/geisha.svg')",
+      "none" : "none"
     }
   },
-  plugins: [],
+  
 }

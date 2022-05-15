@@ -1,8 +1,9 @@
 import { useLoader } from '@react-three/fiber'
-import { Suspense, useRef } from 'react'
+import { Suspense, useContext, useRef } from 'react'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Environment, OrbitControls } from "@react-three/drei";
+import { MediaContext } from '../../App';
 const GroupObj = ()=>{
     const rocket = useLoader(GLTFLoader, "./assets/3dObj/rocket/scene.gltf")
     const cloud1 = useLoader(GLTFLoader, "./assets/3dObj/cloud/scene.gltf")
@@ -27,6 +28,8 @@ const GroupObj = ()=>{
 
 
 export default function(){
+
+  const {isDesktop}= useContext(MediaContext)
   
 
     return (
@@ -34,7 +37,7 @@ export default function(){
             <Suspense fallback={null}>
               <GroupObj />
             </Suspense>
-            <OrbitControls />
+            {isDesktop &&  <OrbitControls />}
           <Environment files="./assets/hdri/studio.hdr" background={false} />
         </Canvas>
     )

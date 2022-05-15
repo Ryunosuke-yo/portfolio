@@ -20,6 +20,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  background-color: #292929;
+  
 }
 
 
@@ -35,15 +37,16 @@ body {
   }
 }
 
-#sp_image_2 {
-  height: 32px;
-  width: 32px;
-  background: url("../assets/attack.png")
-    0px 0px ;
-  animation: play2 1s steps(21) infinite;
+@media screen and (min-width:480px) {
+  
 }
-@keyframes play2 {
-  100% {
-    background-position:  -2604px;
+#ver {
+  writing-mode: vertical-lr;
+}
+
+@media screen and (min-width : 1080px) {
+  body {
+    background-image: url("../assets/Svgs/geisha.svg");
   }
+
 }
