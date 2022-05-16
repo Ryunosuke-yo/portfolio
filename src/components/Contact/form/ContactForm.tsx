@@ -29,7 +29,7 @@ export default function(props: Props){
     return (
         <Suspense fallback={<Loading />}>
         <Slide left cascade duration={500}>
-        <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col w-6/12  mx-auto text-center text-xl mt-9">
+        <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col w-5/6 desktop:w-6/12  mx-auto text-center text-xl mt-9 pb-2">
             <div className="mt-4">
                 <label htmlFor="from_name" className="underline decoration-dashed">Your Name</label>
                 <input  className="border-3 placeholder:text-center w-full mt-4 focus:outline-none rounded-2xl py-2 px-4" {...register("from_name")}/>

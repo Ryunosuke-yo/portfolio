@@ -23,7 +23,14 @@ const Header = ()=>{
        { isMobile &&
         <header className='flex justify-between px-5 py-6 items-center w-screen bg-white'>
             <h1 className='text-xl'>Ryunosuke Yokokawa</h1>
-            <AiOutlineMenu size={30} />
+            <div className='flex justify-around items-center'>
+            <a href="https://www.linkedin.com/in/ryunosukey/" target="_blank" rel="noopener noreferrer" className="m-auto p-3 opacity-80">
+                <img src="../../../assets/Svgs/linkedin-icon.svg"  width={20} height={20} alt="" />
+            </a>
+            <a href="https://github.com/Ryunosuke-yo" target="_blank" rel="noopener noreferrer" className="m-auto p-3 opacity-80">
+                <img src="../../../assets/Svgs/github-icon.svg"  width={20} height={20}/>
+            </a>
+            </div>
         </header>}
         {isDesktop && 
          <header className="z-10 flex justify-between items-center px-12 py-12 text-2xl text-bg bg-white">

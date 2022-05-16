@@ -11,8 +11,8 @@ export default function(){
                     <div className="grid gap-4 grid-cols-2  w-full text-xl">
                         <p className="border border-white rounded-lg p-4 text-center">React</p>
                         <p className="border border-white rounded-lg p-4 text-center">React Native</p>
-                        <p className="border border-white rounded-lg p-4 text-center ">NodeJs/Express</p>
-                        <p className="border border-white rounded-lg p-4   text-center">HTML/CSS</p>
+                        <p className="border border-white rounded-lg p-4 text-center ">NodeJs</p>
+                        <p className="border border-white rounded-lg p-4   text-center">HTML CSS</p>
                     </div>
                     <h2 className="mt-9 mb-9 text-center text-xl">Currently Learning</h2>
                     <div className="grid gap-4 grid-cols-2  w-full text-xl">

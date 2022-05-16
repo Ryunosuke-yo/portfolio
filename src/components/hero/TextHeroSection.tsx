@@ -12,9 +12,9 @@ import { MediaContext } from "../../App"
     return (
     <div> 
             <Zoom left cascade delay={200}>
-                <h1 className="pt-8 text-9xl desktop:text-8xl" id={isDesktop ? "" : "ver"}>Hello!</h1>
-                <h1 className="pt-4 text-3xl desktop:pt-8 desktop:text-8xl">I'm Ryunosuke Yokokawa</h1>
-                <h2 className="pt-4 text-xl desktop-pt-8 desktop:text-8xl">Japanese Web Developer in Canada</h2>              
+                <h1 className="pt-8 text-9xl" id="ver">Hello!</h1>
+                <h1 className="pt-4 text-3xl desktop:pt-8 desktop:text-5xl">I'm Ryunosuke Yokokawa</h1>
+                <h2 className="pt-4 text-xl desktop-pt-8 desktop:text-5xl">Japanese Web Developer in Canada</h2>              
             </Zoom>
 
             {/* <Bounce left cascade >

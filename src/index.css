@@ -9,6 +9,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 @layer base {
   html {
     font-family: 'Caveat', cursive;
@@ -36,17 +37,13 @@ body {
     background-position: -1440px 0;
   }
 }
-
-@media screen and (min-width:480px) {
-  
-}
 #ver {
   writing-mode: vertical-lr;
 }
 
-@media screen and (min-width : 1080px) {
+/* @media screen and (min-width : 768px) {
   body {
     background-image: url("../assets/Svgs/geisha.svg");
   }
 
-}
+} */

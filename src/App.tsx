@@ -36,18 +36,15 @@ function App() {
     loading ? <Loading /> : 
     <MediaContext.Provider value={mediaContextValue}>
       <FadeIn>
-        <StickyMedia />
+        {isDesktop && <StickyMedia />}   
         <Header /> 
-        <div className="desktop:grid desktop:grid-cols-2 block tablet:grid tablet:grid-cols-2">
+        <div className="desktop:grid desktop:grid-cols-2 block desktop:bg-geisha desktop:bg-no-repeat desktop:bg-cover desktop:bg-left-top">
             <Parallax translateX={[33, -40]} opacity={[2.6, -0.7]}>
-              <div className="bg-bg text-white font-playfair px-5 h-screen bg-geisha bg-cover bg-center bg-no-repeat">
+              <div className="bg-bg text-white font-playfair px-5 h-screen bg-geisha bg-cover bg-center bg-no-repeat ">
                 <TextHeroSection />
               </div>
             </Parallax>
-            <Parallax translateX={[-29, 40]} opacity={[2.6, -0.7]} className="bg-white w-full hidden tablet:block">
-              <div>
-                <SvgHeroSection />
-              </div>
+            <Parallax translateX={[-29, 40]} opacity={[2.6, -0.7]} className="bg-white w-full hidden tablet:block bg-geisha bg-no-repeat bg-cover bg-center">
             </Parallax>
 
         </div>
@@ -63,7 +60,7 @@ function App() {
             </div>
               
             <div className='bg-purple flex justify-center col-span-2 z-10 h-screen'>
-              <Parallax  translateY={[-1, 20]} opacity={[3, -0.9]}>
+              <Parallax  translateY={[-1, 20]} opacity={[3, -0.9]} >
                 <ProjectSection />
               </Parallax>
             </div>
@@ -80,8 +77,8 @@ function App() {
             </Parallax>
               </div>
               
-              <div className='bg-green  col-span-3 h-screen relative' id="Contact">
-                <Parallax translateY={[3, 20]}>
+              <div className='mt-0  col-span-3  relative bg-green' id="Contact">
+                <Parallax translateY={[3, 20]}  className='bg-green pb-8 pt-8'>
                   <Contact />
                 </Parallax>
               </div>
