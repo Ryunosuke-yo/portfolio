@@ -18,17 +18,21 @@ module.exports = {
         playfair : ['Playfair Display SC', 'serif'],
         ci : ['Cinzel', 'serif'],
         hand : ['Aguafina Script', 'cursive'],
-        pixel : ['VT323', 'monospace']
+        pixel : ['VT323', 'monospace'],
+        t : ['Titillium Web', 'sans-serif'],
+        quiksand : ['Quicksand', "sans-serif"],
+        josefin : ['Josefin Sans', "sans-serif"]
       }
     },
     screens : {
       mobile : "480px",
-      // tablet : "768px",
+      md : "500px",
       desktop : "768px",
     },
     backgroundImage: {
       'geisha': "url('./assets/Svgs/geisha.svg')",
-      "none" : "none"
+      "none" : "none",
+      "hand" : "url('./assets/Svgs/hand.svg')"
     }
   },
   

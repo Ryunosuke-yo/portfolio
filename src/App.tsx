@@ -18,7 +18,7 @@ export const MediaContext = createContext<any>(null)
 
 function App() { 
   const isDesktop = useMediaQuery({
-    query: '(min-width: 1080px)'
+    query: '(min-width: 768px)'
   })
 
   const mediaContextValue = {isDesktop}
@@ -27,6 +27,11 @@ function App() {
     useEffect(()=>{
         setLoading(false)
     },[])  
+
+
+    const backgroudStyle = {
+      backgroundSize : isDesktop ? "30%" : "80%" 
+    }
 
     
 
@@ -64,14 +69,14 @@ function App() {
               </Parallax>
             </div>
 
-            <div className='col-span-2 bg-red z-10 h-screen pt-6' id="About">
-              <Parallax translateX={[-30, 10]} opacity={[1.7, -0.7]}>
-                <AboutMe />
+            <div className='col-span-2 bg-red z-10 h-screen pt-6 bg-hand' id="About" style={backgroudStyle}>
+              <Parallax translateX={isDesktop ? [-60, 23] : [-60, -10]}>
+                <AboutMe /> 
               </Parallax>
             </div>
 
               <div className='bg-bg h-screen overflow-hidden z-10 px-9' id="Skills">
-            <Parallax translateX={[70, -70]} opacity={[4,-2]}>
+            <Parallax translateX={[70, -79]} opacity={[4,-2]}>
               <Skills/>
             </Parallax>
               </div>

@@ -60,7 +60,7 @@ export default function(){
                     <div className="bg-bg text-white rounded-3xl relative p-5">
                         <h2 className='text-center text-2xl desktop:text-5xl '> - {selectedProject?.title} - </h2>
                         <IoCloseOutline onClick={()=>setSelectedId(null)} className="absolute top-9 right-10 cursor-pointer"/>
-                        <div className='text-xl desktop:text-2xl font-light'>
+                        <div className='text-lg desktop:text-2xl font-300 font-josefin italic'>
                             <div className='flex'>
                             <img className='my-3 desktop:mt-9 mx-auto rounded-xl' src={selectedProject?.image} alt=""  width={size} height={size}/>
                                 
