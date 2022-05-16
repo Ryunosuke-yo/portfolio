@@ -129,7 +129,7 @@
   declare module 'react-reveal/Bounce' {
     import React from 'react';
   
-    class Animation extends React.Component<RevealProps> {}
+    class Animation extends React.Component<any> {}
     export default Animation;
   }
   
@@ -171,14 +171,14 @@
   declare module 'react-reveal/Slide' {
     import React from 'react';
   
-    class Animation extends React.Component<RevealProps> {}
+    class Animation extends React.Component<any> {}
     export default Animation;
   }
   
   declare module 'react-reveal/Zoom' {
     import React from 'react';
   
-    class Animation extends React.Component<RevealProps> {}
+    class Animation extends React.Component<any> {}
     export default Animation;
   }
   
