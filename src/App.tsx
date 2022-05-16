@@ -1,4 +1,3 @@
-import "../src/App.css"
 import Skills from './components/About/Skills'
 import Header from './components/Header'
 import ProjectSection from './components/projects/ProjectSection'
@@ -7,7 +6,7 @@ import { Parallax } from 'react-scroll-parallax';
 import TextHeroSection from './components/hero/TextHeroSection'
 import ThreeSeceneProjects from './components/projects/ThreeSeceneProjects'
 import Contact from './components/Contact/Contact'
-import { useEffect, useState, useCallback, createContext } from 'react'
+import { useEffect, useState,createContext } from 'react'
 import Loading from './components/loading/Loading'
 import StickyMedia from './components/StickyMedia'
 import FadeIn from 'react-fade-in'

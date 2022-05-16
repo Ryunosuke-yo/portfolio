@@ -1,7 +1,5 @@
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 import { useMediaQuery } from 'react-responsive'
-import { elastic as Menu } from 'react-burger-menu'
-import { AiOutlineMenu } from "react-icons/ai";
 const Header = ()=>{
     const isDesktop = useMediaQuery({
         query: '(min-width: 800px)'

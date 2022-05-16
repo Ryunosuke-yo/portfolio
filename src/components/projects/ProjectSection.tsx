@@ -1,4 +1,3 @@
-import  Nimble from '../../../assets/projects/nimble.svg'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useContext, useEffect, useState } from 'react'
 import { projectsArr } from './projectArr'

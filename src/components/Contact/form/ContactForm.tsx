@@ -2,8 +2,7 @@ import { useForm } from "react-hook-form";
 import { send } from 'emailjs-com';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
-import Modal from "react-bootstrap/Modal";
-import { useState, Suspense } from "react";
+import { Suspense } from "react";
 import Slide from "react-reveal/Slide"
 import Loading from "../../loading/Loading"
 interface Props {

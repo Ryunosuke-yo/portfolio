@@ -1,7 +1,3 @@
-import { motion } from "framer-motion"
-import { createRef, forwardRef, useContext, useEffect, useRef } from "react"
-import Header from "../Header"
-import Bounce from 'react-reveal/Bounce'
 import Zoom from "react-reveal/Zoom"
 
     export default function(){

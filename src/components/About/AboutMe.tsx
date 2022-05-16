@@ -1,6 +1,4 @@
-import {motion} from "framer-motion"
 import { useContext, useEffect, useRef, useState } from "react"
-import backSvg from "../../../assets/Svgs/hand.svg" 
 import { MediaContext } from "../../App"
 export default function(){
 

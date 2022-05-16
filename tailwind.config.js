@@ -19,7 +19,6 @@ module.exports = {
         ci : ['Cinzel', 'serif'],
         hand : ['Aguafina Script', 'cursive'],
         pixel : ['VT323', 'monospace'],
-        t : ['Titillium Web', 'sans-serif'],
         quiksand : ['Quicksand', "sans-serif"],
         josefin : ['Josefin Sans', "sans-serif"]
       }

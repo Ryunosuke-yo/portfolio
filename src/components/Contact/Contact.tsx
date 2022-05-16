@@ -1,6 +1,4 @@
 import ContactForm from "./form/ContactForm";
-import backSvg2 from "../../../assets/Svgs/suit2.svg"
-import backSvg from "../../../assets/Svgs/suitMan.svg"
 import { useState } from "react";
 export default function(){
 
