@@ -23,9 +23,8 @@ module.exports = {
     },
     screens : {
       mobile : "480px",
-      tablet : "768px",
+      // tablet : "768px",
       desktop : "768px",
-      xlg : ""
     },
     backgroundImage: {
       'geisha': "url('./assets/Svgs/geisha.svg')",

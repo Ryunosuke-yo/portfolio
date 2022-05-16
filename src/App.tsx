@@ -1,11 +1,10 @@
-import './App.css'
+import "../src/App.css"
 import Skills from './components/About/Skills'
 import Header from './components/Header'
 import ProjectSection from './components/projects/ProjectSection'
 import AboutMe from './components/About/AboutMe'
 import { Parallax } from 'react-scroll-parallax';
 import TextHeroSection from './components/hero/TextHeroSection'
-import SvgHeroSection from './components/hero/SvgHeroSection'
 import ThreeSeceneProjects from './components/projects/ThreeSeceneProjects'
 import Contact from './components/Contact/Contact'
 import { useEffect, useState, useCallback, createContext } from 'react'
@@ -44,7 +43,7 @@ function App() {
                 <TextHeroSection />
               </div>
             </Parallax>
-            <Parallax translateX={[-29, 40]} opacity={[2.6, -0.7]} className="bg-white w-full hidden tablet:block bg-geisha bg-no-repeat bg-cover bg-center">
+            <Parallax translateX={[-29, 40]} opacity={[2.6, -0.7]} className="bg-white w-full bg-geisha bg-no-repeat bg-cover bg-center hidden desktop:block">
             </Parallax>
 
         </div>

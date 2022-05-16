@@ -5,10 +5,6 @@ import { projectsArr } from './projectArr'
 import {IoCloseOutline} from "react-icons/io5"
 import Bounce from "react-reveal/Bounce"
 import { MediaContext } from '../../App'
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
 
 
 
@@ -31,7 +27,7 @@ export default function(){
     const [selectedProject, setSelectedProject] = useState<Project>()
     const size = selectedProject?.size ? selectedProject?.size : 300
     const {isDesktop} = useContext(MediaContext)
-    const iconSize = MediaContext ? 164 : 120
+    const iconSize = isDesktop ? 164 : 120
     
 
     const mapProjects = projectsArr.map((project: any)=>(
@@ -56,17 +52,16 @@ export default function(){
                     initial={{opacity: 0 }}
                     animate={{opacity: 1 }}
                     exit={{opacity: 0 }}
-                    className="top-0 desktop:top-0 absolute desktop:h-full desktop:w-full -left-3 px-8 "
+                    className="top-0 desktop:top-0 absolute left-1  px-5 "
                     style={{
                         top: "-5%"
                     }}
                     >   
-                    <div className=" bg-bg text-white rounded-3xl relative px-11 py-11 h-full desktop:h-auto">
+                    <div className="bg-bg text-white rounded-3xl relative p-5">
                         <h2 className='text-center text-2xl desktop:text-5xl '> - {selectedProject?.title} - </h2>
                         <IoCloseOutline onClick={()=>setSelectedId(null)} className="absolute top-9 right-10 cursor-pointer"/>
                         <div className='text-xl desktop:text-2xl font-light'>
                             <div className='flex'>
-                               
                             <img className='my-3 desktop:mt-9 mx-auto rounded-xl' src={selectedProject?.image} alt=""  width={size} height={size}/>
                                 
                             </div>
