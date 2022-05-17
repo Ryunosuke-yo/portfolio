@@ -29,9 +29,9 @@ module.exports = {
       desktop : "768px",
     },
     backgroundImage: {
-      'geisha': "url('./assets/Svgs/geisha.svg')",
+      'geisha': "url('/assets/Svgs/geisha.svg')",
       "none" : "none",
-      "hand" : "url('./assets/Svgs/hand.svg')"
+      "hand" : "url('/assets/Svgs/hand.svg')"
     }
   },
   
