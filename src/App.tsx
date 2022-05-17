@@ -70,7 +70,7 @@ function App() {
             </div>
 
             <div className='col-span-2 bg-red z-10 h-screen pt-6 bg-hand' id="About" style={backgroudStyle}>
-              <Parallax translateX={isDesktop ? [-60, 23] : [-60, -10]}>
+              <Parallax opacity={[-1,3]} translateY={[0,40]}>
                 <AboutMe /> 
               </Parallax>
             </div>
@@ -95,3 +95,4 @@ function App() {
 }
 
 export default App
+// translateX={isDesktop ? [-60, 23] : [-60, -10]}
