@@ -20,9 +20,9 @@ function App() {
     query: '(min-width: 768px)'
   })
 
+  
+  const [loading, setLoading] = useState(true)
   const mediaContextValue = {isDesktop}
-    
-    const [loading, setLoading] = useState(true)
     useEffect(()=>{
         setLoading(false)
     },[])  
@@ -57,7 +57,8 @@ function App() {
             <div className='bg-yellow z-10' id="Projects">
               <Parallax translateY={[-10, 8]} opacity={[0, 2]}>
                 <div className=' desktop:h-screen h-96'>
-                    <ThreeSeceneProjects />
+                  <ThreeSeceneProjects /> 
+                   
                 </div>
               </Parallax>
             </div>

@@ -1,14 +1,14 @@
 import { useLoader } from '@react-three/fiber'
-import { Suspense, useContext, useRef } from 'react'
+import { Suspense, useContext, useEffect, useRef } from 'react'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Environment, OrbitControls } from "@react-three/drei";
 import { MediaContext } from '../../App';
 const GroupObj = ()=>{
-    const rocket = useLoader(GLTFLoader, "assets/3dObj/rocket/scene.gltf")
-    const cloud1 = useLoader(GLTFLoader, "assets/3dObj/cloud/scene.gltf")
-    const cloud2 = useLoader(GLTFLoader, "assets/3dObj/cloud2/scene.gltf")
-    const astro = useLoader(GLTFLoader, "assets/3dObj/astr/scene.gltf")
+    const rocket = useLoader(GLTFLoader, "/assets/3dObj/rocket/scene.gltf")
+    const cloud1 = useLoader(GLTFLoader, "/assets/3dObj/cloud/scene.gltf")
+    const cloud2 = useLoader(GLTFLoader, "/assets/3dObj/cloud2/scene.gltf")
+    const astro = useLoader(GLTFLoader, "/assets/3dObj/astr/scene.gltf")
 
     const groupRef = useRef<any>()
 
@@ -30,13 +30,16 @@ const GroupObj = ()=>{
 export default function(){
 
   const {isDesktop}= useContext(MediaContext)
-  
+
+
 
     return (
         <Canvas>
+            <Suspense fallback={null}>
               <GroupObj />
+            </Suspense>
             {isDesktop &&  <OrbitControls />}
-          <Environment files="assets/hdri/studio.hdr" background={false} />
+          <Environment files="/assets/hdri/studio.hdr" background={false} />
         </Canvas>
     )
 }
