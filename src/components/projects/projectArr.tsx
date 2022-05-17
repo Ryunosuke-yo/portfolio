@@ -9,8 +9,8 @@ export const projectsArr = [
             back : "Nodejs, GraphQL, firebase"
         },
         url : "https://github.com/JavierLeon100/Nimble-App",
-        icon : "../../../assets/projects/nimble.svg",
-        image : "../../../assets/projects_image/nimble_image.png",
+        icon : "/assets/projects/nimble.svg",
+        image : "/assets/projects_image/nimble_image.png",
         website : "https://nimble-project.webflow.io/"
     },
     {
@@ -23,8 +23,8 @@ export const projectsArr = [
             back : "Nodejs/Express, MongoDB",
         },
         url : "https://github.com/sahibrightnow/Skillbarter",
-        icon : "../../../assets/projects/SkillBarter.svg",
-        image : "../../../assets/projects_image/skillbarter.png",
+        icon : "/assets/projects/SkillBarter.svg",
+        image : "/assets/projects_image/skillbarter.png",
             
     },
     {
@@ -37,8 +37,8 @@ export const projectsArr = [
             back : "Nodejs/Express, MongoDB"
         },
         url : "https://github.com/jharteaga/moving-tracker-pwa",
-        image : "../../../assets/projects/moving-tracker-.svg",
-        icon : "../../../assets/projects/moving-tracker-.svg"
+        image : "/assets/projects/moving-tracker-.svg",
+        icon : "/assets/projects/moving-tracker-.svg"
     },
     {
         title : "Vanfood",
@@ -50,8 +50,8 @@ export const projectsArr = [
             back : "Nodejs/Express, MongoDB"
         },
         url : "https://github.com/Ryunosuke-yo/Vanfood",
-        image : "../../../assets/projects_image/vanfood.png",
-        icon : "../../../assets/projects/vanfood.svg"
+        image : "/assets/projects_image/vanfood.png",
+        icon : "/assets/projects/vanfood.svg"
     },
     {
         title : "Game With Me",
@@ -63,8 +63,8 @@ export const projectsArr = [
             back : "NodeJs/Express, firebase"
         },
         url : "https://github.com/Ryunosuke-yo/Game-with-me",
-        image : "../../../assets/projects/game-with-me.svg",
-        icon : "../../../assets/projects/game-with-me.svg"
+        image : "/assets/projects/game-with-me.svg",
+        icon : "/assets/projects/game-with-me.svg"
     },
     {
         title : "This portfolio",
@@ -76,8 +76,8 @@ export const projectsArr = [
             back : "no backend"
         },
         url : "https://github.com/Ryunosuke-yo/portfolio",
-        image : "../../../assets/Svgs/geisha.svg",
-        icon : "../../../assets/Svgs/geisha.svg",
+        image : "/assets/Svgs/geisha.svg",
+        icon : "/assets/Svgs/geisha.svg",
         size : 100
 
     }

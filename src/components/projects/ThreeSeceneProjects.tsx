@@ -34,9 +34,7 @@ export default function(){
 
     return (
         <Canvas>
-            <Suspense fallback={null}>
               <GroupObj />
-            </Suspense>
             {isDesktop &&  <OrbitControls />}
           <Environment files="assets/hdri/studio.hdr" background={false} />
         </Canvas>
