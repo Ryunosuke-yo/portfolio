@@ -21,7 +21,7 @@ export default function(props: Props){
         resolver: yupResolver(schema)
     });
     const onSubmit = (data: any) => {
-        send(import.meta.env.VITE_SERVICE_ID , import.meta.env.VITE_TEMP_ID , data, import.meta.env.VITE_PUBLIC_ID )
+        send(import.meta.env.VITE_SERVICE , import.meta.env.VITE_TEMP , data, import.meta.env.VITE_PUBLIC )
         setShow(true)
     }
 
