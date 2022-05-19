@@ -23,9 +23,16 @@ function App() {
   
   const [loading, setLoading] = useState(true)
   const mediaContextValue = {isDesktop}
-    useEffect(()=>{
-        setLoading(false)
-    },[])  
+  //   useEffect(()=>{
+  //       setLoading(false)
+  //   },[]) 
+  
+  useEffect(() => {
+    const loading = setTimeout(() => {
+      setLoading(false)
+    }, 1000);
+    return () => clearTimeout(loading);
+  }, []);
 
 
     const backgroudStyle = {
