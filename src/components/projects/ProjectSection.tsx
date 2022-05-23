@@ -1,10 +1,10 @@
 import { motion, AnimatePresence } from 'framer-motion'
-import { useContext, useEffect, useState } from 'react'
+import { useContext, useEffect, useState, useRef } from 'react'
 import { projectsArr } from './projectArr'
 import {IoCloseOutline} from "react-icons/io5"
 import Bounce from "react-reveal/Bounce"
 import { MediaContext } from '../../App'
-
+import autoAnimate from '@formkit/auto-animate'
 
 
 
@@ -27,20 +27,32 @@ export default function(){
     const size = selectedProject?.size ? selectedProject?.size : 300
     const {isDesktop} = useContext(MediaContext)
     const iconSize = isDesktop ? 164 : 120
+
+    const ref = useRef(null)
+
+    useEffect(() => {
+        ref.current && autoAnimate(ref.current)
+      }, [ref])
+    
     
 
     const mapProjects = projectsArr.map((project: any)=>(
-        <motion.div 
-        className="flex flex-col items-center justify-center cursor-pointer" onClick={()=>{setSelectedId(project.title), setSelectedProject(project)}} layoutId={project.title}>
+        <motion.div className="flex flex-col items-center justify-center cursor-pointer" onClick={()=>{setSelectedId(project.title), setSelectedProject(project)}} layoutId={project.title}>
              <img src={project.icon} alt="" width={iconSize} height={iconSize}/>
         </motion.div>
     ))
+
+    const mapProjectForMobile  = 
+        projectsArr.map(project=>
+            <img src={project.icon} alt="" width={iconSize} height={iconSize}/>)
+    
+    
     return (
         <div className="flex justify-center flex-col items-center relative desktop:pt-9">
             <h1 className='text-3xl text-bg'>Projects</h1>
             <Bounce cascade top>
-                <div className="grid grid-cols-2 desktop:grid-cols-3 gap-10 desktop:gap-20 px-6">
-                    {mapProjects}
+                <div className="grid grid-cols-2 desktop:grid-cols-3 gap-10 desktop:gap-20 px-6" ref={ref}>
+                    {isDesktop ? mapProjects : mapProjectForMobile}
                 </div>
                 <p className='text-2xl mt-8'>Click each to see details</p>
 
@@ -71,9 +83,9 @@ export default function(){
                             <p className='mt-2 desktop:mt-9'>{selectedProject?.date}</p>
                         </div>
                         <div className='pt-2 desktop:pt-9 text-center text-xl flex items-center justify-around'>
-                        <a href={selectedProject?.website} className="underline" target="_blank" rel="noopener noreferrer">Github Repo</a>
+                        <a href={selectedProject?.url} className="underline" target="_blank" rel="noopener noreferrer">Github Repo</a>
                         {selectedProject?.website &&                    
-                                <a href={selectedProject?.url} className="underline" target="_blank" rel="noopener noreferrer">website</a>
+                                <a href={selectedProject?.website} className="underline" target="_blank" rel="noopener noreferrer">website</a>
                         }
                         </div>
                     </div> 
