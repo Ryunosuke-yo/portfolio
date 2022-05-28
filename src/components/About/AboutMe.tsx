@@ -15,7 +15,7 @@ export default function(){
                         >
                         <h1 className="mx-auto text-center text-2xl desktop:text-6xl font-hand">About Me</h1>
                         <div className="mt-9 mx-auto text-2xl desktop:text-3xl font-josefin">
-                            <p >I am a web developer in Canada. I am really intrigued and passionate about front-end development. I love to create UI, animation and explore libraries!!</p>
+                            <p >I am a web developer in Canada. I am really intrigued and passionate about web development. I love to create UI, animation and interact with web technologies!!</p>
                             
                         <div className="mt-3 desktop:mt-5 text-lg desktop:text-2xl">
                             <p className="mt-9">2016-2020 : BA in International Development, Kansai Gaidai University In Japan</p>

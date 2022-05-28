@@ -33,7 +33,7 @@ export const projectsArr = [
         desc : "Web application with PWA functionality for management of moving boxes",
         myRole : "Great contribution to mainly front end",
         tech : {
-            front : "HTML, ass, Javascript",
+            front : "HTML, Sass, Javascript",
             back : "Nodejs/Express, MongoDB"
         },
         url : "https://github.com/jharteaga/moving-tracker-pwa",

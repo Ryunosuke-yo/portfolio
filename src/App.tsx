@@ -23,9 +23,6 @@ function App() {
   
   const [loading, setLoading] = useState(true)
   const mediaContextValue = {isDesktop}
-  //   useEffect(()=>{
-  //       setLoading(false)
-  //   },[]) 
   
   useEffect(() => {
     const loading = setTimeout(() => {
