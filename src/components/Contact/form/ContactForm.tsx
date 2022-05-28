@@ -6,7 +6,7 @@ import { Suspense } from "react";
 import Slide from "react-reveal/Slide"
 import Loading from "../../loading/Loading"
 interface Props {
-    setShow: any
+    setShow: Function
 }
 
 export default function(props: Props){

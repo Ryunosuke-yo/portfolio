@@ -49,10 +49,10 @@ export default function(){
     
     return (
         <div className="flex justify-center flex-col items-center relative desktop:pt-9">
-            <h1 className='text-3xl text-bg'>Projects</h1>
+            <h1 className='text-3xl text-bg mb-9 desktop:mb-0'>Projects</h1>
             <Bounce cascade top>
                 <div className="grid grid-cols-2 desktop:grid-cols-3 gap-10 desktop:gap-20 px-6" ref={ref}>
-                    {isDesktop ? mapProjects : mapProjectForMobile}
+                    { mapProjects }
                 </div>
                 <p className='text-2xl mt-8'>Click each to see details</p>
 
